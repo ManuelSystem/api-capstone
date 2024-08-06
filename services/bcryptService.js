@@ -7,9 +7,8 @@ const bcrypt = require('bcrypt');
  */
 const hashPassword = async (password) => {
     const salt = await bcrypt.genSalt(10);
-
     return await bcrypt.hash(password, salt);
-}
+};
 
 /**
  * Obtiene una contraseña sin encriptar(la que pasa el usuario) y una contraseña cifrada(almacenada en bd) y las compara
@@ -21,4 +20,4 @@ const comparePassword = async (inputPassword, storePassword) => {
     return await bcrypt.compare(inputPassword, storePassword);
 }
 
-module,exports = { hashPassword, comparePassword };
+module.exports = { hashPassword, comparePassword };

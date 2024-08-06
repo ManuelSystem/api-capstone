@@ -1,6 +1,6 @@
 const { matchedData } = require('express-validator');
-const Event = require('../models/eventModel');
-const Registration = require('../models/registrationModel');
+const Event = require('../models/event');
+const Registration = require('../models/registration');
 
 /**
  * Crear un nuevo evento
